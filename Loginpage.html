@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css">    
+</head>
+
+<body>
+    <div class="login-main">
+        <div class="login-content">
+            <form action="" name="loginForm" onsubmit="return validateLoginForm(event)" method="POST">
+                <div class="login-head">User Login</div><br>
+
+                <div class="formdesign" id="form-container">
+                    <!-- Email -->
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>              
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                   
+                    <!-- Login Button -->
+                    <div>
+                        <button type="submit">Login</button>
+                    </div>
+                </div>
+
+                <!-- Redirect to Registration page -->
+                <div class="alert">
+                    <p>Don't have an account? <a href="Register.html">Register here</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- javascript -->
+<script>
+    function validateLoginForm(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (!email || !password) {
+            alert("Both email and password are required.");
+            return false;
+        }
+        // Retrieve stored registration data
+        const registeredEmail = localStorage.getItem("registeredEmail");
+        const registeredPassword = localStorage.getItem("registeredPassword");
+
+        if (email === registeredEmail && password === registeredPassword) {
+            alert("Login successful!");
+            window.location.href = "Dashboard.html";
+        } else {
+            alert("Invalid email or password. Please try again.");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+   
+}
+
+/* Body Styling */
+body { 
+    background-color: #f5f5f5;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+     background-color: #f1f1f0;
+}
+
+/* Common Button Styling */
+button {
+    background-color: #0CBABA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #380036;
+}
+
+/* Alert Message */
+.alert {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.alert a:hover {
+    color: #4CAF50;
+}
+
+/* Registration Page */
+.reg-main {
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+.reg-head {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #3e3e3e;
+}
+
+.reg-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.formdesign input,
+.formdesign textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Login Page */
+.login-main {
+    max-width: 400px;
+    padding: 28px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+.login-head {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #3e3e3e;
+}
+
+.login-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Form Inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reg-main,
+    .login-main {
+        width: 90%;
+    }
+}
+/* Alert Message - Updated */
+.alert a {
+    color: #0CBABA; 
+    text-decoration: none;
+    font-weight: bold;
+}
